@@ -27,10 +27,10 @@ class AddLimiteMaturityClosureToCreditCards extends Migration
      */
     public function down()
     {
-        Schema::table('credit_cards', function($table) {
-            $table->dropColumn('limite');
-            $table->dropColumn('maturity');
-            $table->dropColumn('closure');
-        });
+        // Schema::table('credit_cards', function($table) {
+        //     $table->dropColumn('limite');
+        //     $table->dropColumn('maturity');
+        //     $table->dropColumn('closure');
+        // });
     }
 }

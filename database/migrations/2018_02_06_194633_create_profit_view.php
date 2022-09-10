@@ -15,7 +15,7 @@ class CreateProfitView extends Migration
     {
         DB::statement("
             create view profit30days as
-              SELECT SUM( (profits.value/100) ) AS value,
+              SELECT SUM( (profits.value) ) AS value,
                 day(profits.created_at) AS day,
                 profits.user_id
                FROM profits
@@ -31,6 +31,6 @@ class CreateProfitView extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profit30days');
+        DB::statement("DROP VIEW profit30days;");
     }
 }

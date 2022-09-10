@@ -29,7 +29,7 @@ class AlterViewBalanceAccount extends Migration
                 a.category_id,
                 b.name,
                 a.user_id,
-                sum((p.value / 100)) AS value
+                sum((p.value)) AS value
               FROM ((accounts a
                  JOIN profits p ON ((a.id = p.account_id)))
                  JOIN banks b ON ((a.bank_id = b.id)))

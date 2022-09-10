@@ -15,7 +15,7 @@ class AlterViewExpense30Days extends Migration
     {
         DB::statement("
             CREATE OR REPLACE view expense30days as
-              SELECT SUM( (expenses.value/100) ) AS value,
+              SELECT SUM( (expenses.value) ) AS value,
                 EXTRACT(DAY FROM expenses.date_operation) AS day,
                 expenses.user_id AS user_id
               FROM expenses
@@ -33,7 +33,7 @@ class AlterViewExpense30Days extends Migration
     {
         DB::statement("
             CREATE OR REPLACE view expense30days as
-                SELECT SUM( (expenses.value/100) ) AS value,
+                SELECT SUM( (expenses.value) ) AS value,
                   day(expenses.created_at) AS day,
                   expenses.user_id AS user_id
                 FROM expenses

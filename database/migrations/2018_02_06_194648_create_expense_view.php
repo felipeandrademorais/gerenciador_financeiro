@@ -15,7 +15,7 @@ class CreateExpenseView extends Migration
     {
         DB::statement("
             create view expense30days as
-                SELECT SUM( (expenses.value/100) ) AS value,
+                SELECT SUM( (expenses.value) ) AS value,
                     day(expenses.created_at) AS day,
                     expenses.user_id AS user_id
                 FROM expenses

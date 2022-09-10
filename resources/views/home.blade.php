@@ -22,7 +22,7 @@
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fas fa-chart-line"></i> Total em Aplicações</span>
                 <div class="count">{{Auth::user()->applications->sum('value')/100}}</div>
-                <span class="count_bottom"><i class="green"><i class="fas fa-sort-up"></i>{{Auth::user()->applications->avg('expected')/100}}</i> de Rendimento esperado</span>
+                <span class="count_bottom"><i class="green"><i class="fas fa-sort-up"></i>{{Auth::user()->applications->avg('expected')}}</i> de Rendimento esperado</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fas fa-chart-line"></i> SALDO</span>

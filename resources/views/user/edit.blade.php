@@ -16,7 +16,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Dados dos Usuarios<small>Detalhamento das informaçoes</small></h2>
+                            <h2><small>Detalhamento das informaçoes</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
@@ -27,7 +27,6 @@
                         </div>
                         <div class="x_content">
                             {!! BootForm::open(['url' => url("/user/{$user->id}"), 'method' => 'post']) !!}
-                            <h1>Editar Dados</h1>
                             <input name="_method" value="put" type="hidden">
                             {!! BootForm::text('name', 'Nome Completo', $user->name) !!}
 

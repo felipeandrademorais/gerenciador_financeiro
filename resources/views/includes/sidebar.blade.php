@@ -28,7 +28,7 @@
                     <li>
                         <a href="/">
                             <i class="fas fa-home"></i>
-                            Pagina Inicial
+                            <span>Pagina Inicial</span>
                         </a>
                     </li>
                     <li><a><i class="fas fa-address-card" aria-hidden="true"></i> Dados Pessoais<span class="fa fa-chevron-down"></span></a>

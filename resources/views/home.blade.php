@@ -1,10 +1,5 @@
 @extends('layouts.blank')
 
-@push('stylesheets')
-    <!-- Example -->
-    <!--<link href=" <link href="{{ asset("css/myFile.min.css") }}" rel="stylesheet">" rel="stylesheet">-->
-@endpush
-
 @section('main_container')
     <!-- page content -->
     <div class="right_col" role="main">
@@ -13,7 +8,7 @@
         <div class="row tile_count">
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fas fa-address-card"></i> Saldo em Contas</span>
-                <div class="count" id="balance">{{(Auth::user()->profits->where('date','<=', date("Y-m-d H:i:s"))->sum('value')) - (Auth::user()->expenses->where('date','<=', date("Y-m-d H:i:s"))->sum('value'))}}</div>
+                <div class="count" id="balance">{{ $balance }}</div>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="far fa-credit-card"></i>Total de Faturas em Aberto</span>
@@ -21,8 +16,8 @@
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fas fa-chart-line"></i> Total em Aplicações</span>
-                <div class="count">{{Auth::user()->applications->sum('value')/100}}</div>
-                <span class="count_bottom"><i class="green"><i class="fas fa-sort-up"></i>{{Auth::user()->applications->avg('expected')}}</i> de Rendimento esperado</span>
+                <div class="count">{{$investments}}</div>
+                <span class="count_bottom"><i class="green"><i class="fas fa-sort-up"></i>{{$expected_investments}}</i> de Rendimento esperado</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fas fa-chart-line"></i> SALDO</span>
